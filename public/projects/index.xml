@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on Jacob Likins</title>
+    <link>http://localhost:1313/projects/</link>
+    <description>Recent content in Projects on Jacob Likins</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 01 Oct 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>can_dashboard_details.txt</title>
+      <link>http://localhost:1313/projects/can_dashboard/</link>
+      <pubDate>Tue, 01 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/can_dashboard/</guid>
+      <description>&lt;p&gt;I built a Qt-based CAN Dashboard for &lt;a href=&#34;https://www.olineelctricmotorsports.com&#34;&gt;Olin&amp;rsquo;s Formula SAE Team&lt;/a&gt; with a heavy focus on usability, maintainability, and expandability.&lt;/p&gt;&#xA;&lt;h2 id=&#34;features&#34;&gt;Features&lt;/h2&gt;&#xA;&lt;p&gt;&amp;hellip; (rest of your content)&#xA;I built a Qt-based CAN Dashboard for &lt;a href=&#34;https://www.olineelctricmotorsports.com&#34;&gt;Olin&amp;rsquo;s Formula SAE Team&lt;/a&gt; with a heavy focus on usability, maintainability, and expandability.&lt;/p&gt;&#xA;&lt;h2 id=&#34;features-1&#34;&gt;Features&lt;/h2&gt;&#xA;&lt;p&gt;The dashboard allows engineers to quickly and easily get live CAN information to debug our vehicle systems. It is extremely flexible, and can be used at any level, from just monitoring the messages from a single board to those from a particular enclosure or module to the entire car all at once.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

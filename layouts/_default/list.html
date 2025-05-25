@@ -1,0 +1,67 @@
+{{ define "main" }}
+    <main id="main">
+      <h1 id="title">{{ .Title | default .Site.Title }}</h1>
+      {{ $isBranch := .IsNode }}
+      {{ $isHome := .IsHome }}
+      {{/* This is a very dirty way, but I don't know another way to get the sections name. */}}
+      {{ $dirname := "" }}
+      {{ if $isHome }}
+        {{ $dirname = $.Site.Params.Terminal.workDir }}
+      {{ else }}
+        {{ $dirname = .Title }} {{/* For /projects/, $dirname will be "Projects" */}}
+      {{ end }}
+
+      {{ $envWithDir := printf "<strong><span id='user'>%s@%s</span><span id='terminal'>:</span><span id='dir'>~/%s</span></strong><span id='terminal'>$</span>" .Site.Params.Terminal.userName .Site.Params.Terminal.pcName $dirname | safeHTML }}
+
+      {{ $tree := "" }}
+      {{ $leaf := "" }}
+      {{ if $isBranch }} {{/* This is true for section pages like /projects/ */}}
+        {{ $tree = printf "<span id='terminal'>tree ./%s/</span>" $dirname | safeHTML}}
+        {{ $leaf = printf "%s<strong><span id='dir'>./%s/</span></strong><br>" $leaf $dirname | safeHTML}}
+        
+        {{/* Original loop for listing child pages (like individual projects) */}}
+        {{/* Make sure NO "cd home" link is added to $leaf here */}}
+        {{ $.Scratch.Set "index" 0 }}
+        {{ $len := len .Pages }}
+        {{ range .Pages }}
+          {{ $ac :=  .Title}}
+          {{ $link := .RelPermalink }}
+          {{ $pageFromLink := $.Site.GetPage $link }}
+          {{ if $pageFromLink }}
+            {{ $link = $pageFromLink.Permalink }}
+          {{ end }}
+          
+          {{ if eq (add ($.Scratch.Get "index") 1) $len }}
+            {{ $leaf = printf "<span id='terminal'>%s└── <a href='%s'>%s</a></span>" $leaf $link $ac | safeHTML}}
+          {{ else }}
+            {{ $leaf = printf "<span id='terminal'>%s├── <a href='%s'>%s</a></span><br>" $leaf $link $ac | safeHTML}}
+          {{ end }}
+
+          {{ $.Scratch.Set "index" (add ($.Scratch.Get "index") 1) }}
+        {{ end }} {{/* End of "range .Pages" loop */}}
+      {{ end }} {{/* End of "if $isBranch" */}}
+      
+      {{ $ps1Delay := $.Site.Params.Terminal.ps1Delay }}
+      {{ $stdoutDelay :=  $.Site.Params.Terminal.stdoutDelay }}
+      {{ $commandDelay := $.Site.Params.Terminal.commandDelay }}
+      
+      {{/* Call the partial that does the typing animation */}}
+      {{/* Ensure the path is "typeIndex.html", not "partials/typeIndex.html" */}}
+      {{ partial "typeIndex.html" (dict "context" . "envWithDir" $envWithDir "tree" $tree "leaf" $leaf "ps1delay" $ps1Delay "stdoutdelay" $stdoutDelay "commanddelay" $commandDelay ) }}
+
+      {{/* --- START: ADD "Go Home" Link AFTER the main terminal output --- */}}
+      {{/* This will appear after the typeIndex.html script finishes and prints the final prompt */}}
+      {{ if and .IsNode (not .IsHome) }} {{/* Only on section pages (like /projects/) and not on the homepage itself */}}
+        <div class="terminal-post-link" style="margin-top: 0.25em; margin-bottom: 1em;"> {{/* Added some spacing */}}
+          <p style="margin: 0; padding: 0;"> {{/* Basic paragraph to ensure it's on a new line */}}
+            <span id="terminal"> {{/* Use theme's terminal styling for consistency */}}
+              <a href="{{ .Site.Home.RelPermalink }}">../ (cd ~)</a>
+              {{/* You can customize the link text above, e.g., "cd ~" or "Go Home" */}}
+            </span>
+          </p>
+        </div>
+      {{ end }}
+      {{/* --- END: ADD "Go Home" Link --- */}}
+
+    </main>
+{{ end }}

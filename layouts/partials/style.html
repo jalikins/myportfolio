@@ -1,0 +1,38 @@
+<style>
+    {{ if .IsHome }}
+      {{- $default_style := css.Sass (resources.Get "sass/default.scss") -}}
+      {{- $default_style.Content | safeCSS -}}
+    {{ else }}
+      {{- $activity_style := css.Sass (resources.Get "sass/activity.scss") | minify -}}
+      {{- $activity_style.Content | safeCSS -}}
+    {{ end }}
+    
+    {{- $terminal_style := css.Sass (resources.Get "sass/white.scss") | minify -}}
+    
+    {{ with (eq .Site.Params.Terminal.scheme "shell-powershell") }}
+      {{- $terminal_style = css.Sass (resources.Get "sass/powershell.scss") | minify -}}
+      {{- $terminal_style = $terminal_style.Content -}}
+    {{ end }}
+    
+    {{ with (eq .Site.Params.Terminal.scheme "shell-ubuntu") }} 
+      {{- $terminal_style = css.Sass (resources.Get "sass/ubuntu.scss") | minify -}}
+      {{- $terminal_style = $terminal_style.Content -}}
+    {{ end }}
+    
+    {{ with (eq .Site.Params.Terminal.scheme "shell-retro") }}
+      {{- $terminal_style = css.Sass (resources.Get "sass/retro.scss") | minify -}}
+      {{- $terminal_style = $terminal_style.Content -}}
+    {{ end }}
+    
+    {{ $remote := resources.GetRemote "https://raw.githubusercontent.com/Gogh-Co/Gogh/master/data/themes.json" }}
+    {{ $themeData := $remote | transform.Unmarshal }}
+    {{ range $t := $themeData }}
+
+      {{ if eq $t.name $.Site.Params.Terminal.scheme }}
+        {{ $terminal_style = printf "body{background:%s}body #terminal{color:%s}body #user{color:%s}body #dir{color:%s}body .Typewriter__cursor{color:%s}a{color:%s}" $t.background $t.cursor $t.color_03 $t.color_05 $t.cursor $t.cursor | safeCSS }}
+      {{ end }}
+    {{ end }}
+    
+    {{ $terminal_style | safeCSS }}
+    </style>
+    
