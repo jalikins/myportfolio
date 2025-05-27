@@ -1,4 +1,17 @@
-@import url("https://fonts.googleapis.com/css2?family=Inconsolata&display=swap");
+body {
+  background: #fbf1c7; }
+  body #terminal {
+    color: #3c3836; }
+  body #user {
+    color: #98971a; }
+  body #dir {
+    color: #458588; }
+  body .Typewriter__cursor {
+    color: #3c3836; }
+
+a {
+  color: #3c3836; }
+
 :root {
   --cursor-visibility: hidden; }
 

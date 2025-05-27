@@ -1,4 +1,4 @@
-baseURL = 'https://jacobl.me'
+baseURL = 'https://jacobal.netlify.app'
 languageCode = 'en-us'
 title = 'Jacob Likins'
 theme = "hugo-theme-shell"
@@ -19,7 +19,7 @@ theme = "hugo-theme-shell"
   # Note: hugo-theme-shell original: ["shell-powershell", "shell-ubuntu", "shell-retro"]
   # Note: or
   # Note: gogh theme: https://mayccoll.github.io/Gogh/
-  scheme = "Gruvbox"
+  scheme = "gruvbox_light"
 
   # Note: in terminal
   # [userName]@[pcName]:~/$ cd [workDir]
@@ -88,14 +88,14 @@ theme = "hugo-theme-shell"
     url = "/"     # The link URL
     weight = 10   # Order of appearance (lower numbers first)
   [[menu.main]]
-    identifier = "projects"
-    name = "Projects"
-    url = "/projects/"
-    weight = 20
-  [[menu.main]]
     identifier = "about"
     name = "About Me"
     url = "/about/" # Ensure this page exists (e.g., content/about.md)
+    weight = 20
+  [[menu.main]]
+    identifier = "projects"
+    name = "Projects"
+    url = "/projects/"
     weight = 30
   [[menu.main]]
     identifier = "resume"
