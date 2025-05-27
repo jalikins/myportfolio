@@ -1,38 +1,40 @@
-<style>
-    {{ if .IsHome }}
-      {{- $default_style := css.Sass (resources.Get "sass/default.scss") -}}
-      {{- $default_style.Content | safeCSS -}}
-    {{ else }}
-      {{- $activity_style := css.Sass (resources.Get "sass/activity.scss") | minify -}}
-      {{- $activity_style.Content | safeCSS -}}
-    {{ end }}
-    
-    {{- $terminal_style := css.Sass (resources.Get "sass/white.scss") | minify -}}
-    
-    {{ with (eq .Site.Params.Terminal.scheme "shell-powershell") }}
-      {{- $terminal_style = css.Sass (resources.Get "sass/powershell.scss") | minify -}}
-      {{- $terminal_style = $terminal_style.Content -}}
-    {{ end }}
-    
-    {{ with (eq .Site.Params.Terminal.scheme "shell-ubuntu") }} 
-      {{- $terminal_style = css.Sass (resources.Get "sass/ubuntu.scss") | minify -}}
-      {{- $terminal_style = $terminal_style.Content -}}
-    {{ end }}
-    
-    {{ with (eq .Site.Params.Terminal.scheme "shell-retro") }}
-      {{- $terminal_style = css.Sass (resources.Get "sass/retro.scss") | minify -}}
-      {{- $terminal_style = $terminal_style.Content -}}
-    {{ end }}
-    
-    {{ $remote := resources.GetRemote "https://raw.githubusercontent.com/Gogh-Co/Gogh/master/data/themes.json" }}
-    {{ $themeData := $remote | transform.Unmarshal }}
-    {{ range $t := $themeData }}
+{{ $defaultPath := "sass/default.scss" }}
+{{ $defaultResource := resources.Get $defaultPath }}
 
-      {{ if eq $t.name $.Site.Params.Terminal.scheme }}
-        {{ $terminal_style = printf "body{background:%s}body #terminal{color:%s}body #user{color:%s}body #dir{color:%s}body .Typewriter__cursor{color:%s}a{color:%s}" $t.background $t.cursor $t.color_03 $t.color_05 $t.cursor $t.cursor | safeCSS }}
-      {{ end }}
+{{ if not $defaultResource }}
+  {{ errorf "CRITICAL: SASS file not found in project assets: assets/%s. Please check your project's assets/sass directory." $defaultPath }}
+{{ else }}
+  {{/* Attempt to process default.scss only if found */}}
+  {{ $options := (dict "targetPath" "css/default.css" "outputStyle" "compressed" "enableSourceMap" true) }}
+  {{ $style := "" }}
+  {{ with $defaultResource }} {{/* Ensure $defaultResource is not nil before piping */}}
+    {{ $style = . | resources.ToCSS $options | resources.Fingerprint }}
+  {{ end }}
+  {{ if $style }}
+    <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}" media="screen">
+    {{ warnf "Successfully processed project default.scss" }}
+  {{ else }}
+    {{ errorf "CRITICAL: Failed to process SASS for default.scss, even though it was found. Check for SASS errors within the file or its imports." }}
+  {{ end }}
+{{ end }}
+
+{{ if not .IsHome }}
+  {{ $activityPath := "sass/activity.scss" }}
+  {{ $activityResource := resources.Get $activityPath }}
+  {{ if not $activityResource }}
+    {{ errorf "CRITICAL: SASS file not found in project assets: assets/%s. Please check your project's assets/sass directory." $activityPath }}
+  {{ else }}
+    {{/* Attempt to process activity.scss only if found */}}
+    {{ $options_activity := (dict "targetPath" "css/activity.css" "outputStyle" "compressed" "enableSourceMap" true) }}
+    {{ $style_activity := "" }}
+    {{ with $activityResource }} {{/* Ensure $activityResource is not nil before piping */}}
+      {{ $style_activity = . | resources.ToCSS $options_activity | resources.Fingerprint }}
     {{ end }}
-    
-    {{ $terminal_style | safeCSS }}
-    </style>
-    
+    {{ if $style_activity }}
+      <link rel="stylesheet" href="{{ $style_activity.Permalink }}" integrity="{{ $style_activity.Data.Integrity }}" media="screen">
+      {{ warnf "Successfully processed project activity.scss" }}
+    {{ else }}
+      {{ errorf "CRITICAL: Failed to process SASS for activity.scss, even though it was found. Check for SASS errors within the file or its imports (like default.scss)." }}
+    {{ end }}
+  {{ end }}
+{{ end }}
