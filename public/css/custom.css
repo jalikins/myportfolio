@@ -1,0 +1,16 @@
+img {
+    max-width: 100%; /* Ensures image doesn't overflow its container */
+    height: auto;    /* Maintains aspect ratio */
+    display: block;  /* Can help with extra spacing issues below images */
+}
+
+.image-block {
+    text-align: center; /* Centers the image and text within the div */
+    margin-top: 20px;    /* Or your preferred space */
+    margin-bottom: 30px; /* Adjust for desired space BETWEEN blocks */
+}
+
+.image-block img {
+    max-width: 100%;  /* Makes images responsive */
+    height: auto;     /* Maintains aspect ratio */
+}
