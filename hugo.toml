@@ -33,7 +33,7 @@ theme = "hugo-theme-shell"
   # ...
   # Note: result of the tree command
   userName = "jacob"
-  pcName = "jarvis"
+  pcName = "me"
   workDir = "myDir"
   profile = "profile"
 
