@@ -22,28 +22,28 @@ In this year’s game, the team’s goal is to pick up one of the green tri-ball
 
 ## Stages of Development
 
-First, I created a virtual model of the robot using Onshape, a CAD platform. I designed the robot to be able to navigate the field and complete the tasks. This involved designing the robot's chassis, drivetrain, and choosing how it would pick up and place objects.
+First, **I created a virtual model of the robot using Onshape**, a CAD platform. This involved designing the robot's chassis, drivetrain, and the intake mechanism for picking up and placing the tri-balls. The goal was to create a design that could efficiently navigate the field and manipulate the game objects.
 
 <div align="center">
     CAD Model of the Frame
     <img src="/images/clemson/cad_image.png" alt="CAD image" width="600" height="350">
 </div>
 
-The next step is using ISAAC Sim, NVIDIA's robotics simulator, this involved creating a virtual environment that mimics the real-world field and testing the robot's design in that environment. While creating the environment, we made the physical robot and put our own custom parts on it.
+The next step was using ISAAC Sim, NVIDIA's robotics simulator. **I contributed to creating a virtual environment** that mirrored the real-world VEX field. This allowed us to test the robot's design and the initial control algorithms in a simulated setting. Simultaneously, the team worked on the physical robot, integrating custom-designed and 3D-printed parts.
 
 <div align="center">
     TIG Welding
     <img src="/images/clemson/weld.png" alt="TIG Welding" width="600" height="350">
 </div>
- 
- The robot was deployed using the Jetson Nano GPU, for real-time computing, and the Intel Realsense camera, which uses an infrared sensor and two cameras to see in three dimensions. The robot also uses the YOLO object detection algorithm to recognize game elements. Additionally, with odometry, the robot can localize its position within the field.
+
+The robot was equipped with a Jetson Nano GPU for real-time processing and an Intel Realsense camera, which provides 3D vision. To enable autonomous object recognition, **we implemented the YOLO object detection algorithm to identify the green tri-balls**. Additionally, the robot used odometry to estimate its position on the field.
 
 <div align="center">
     Fully Assembled Robot
     <img src="/images/clemson/final_image.png" alt="Final version of physical robot" width="600" height="350">
 </div>
 
-Then the robot and the environment were put together in ISAAC Sim to begin testing how the robot would perform. There were many issues that came up, mostly due to incorrectly dealing with the physics of the robot. An example of this is in order to pick up the tri-ball, the intake would need to behave like a rubber band and stretch but the model would not allow that. This was fixed by changing the physics of the intake to allow it to stretch and compress.
+Integrating the robot model and the environment in ISAAC Sim allowed us to begin testing the autonomous capabilities. We encountered challenges, such as accurately modeling the physical properties of the intake mechanism. For example, the initial model didn't account for the flexibility needed to grasp the tri-ball. **I helped resolve this by adjusting the physics properties of the intake in the simulator.**
 
 <div align="center">
     Robot in ISAAC Sim
@@ -56,7 +56,7 @@ Then the robot and the environment were put together in ISAAC Sim to begin testi
     <img src="/images/clemson/a_star.png" alt="Robot in ISAAC Sim with path" width="600" height="350">
 </div>
 
-The robot needed to find the best path to the tri-ball and then pick it up. This was done by using the YOLO object detection algorithm to spot the tri-ball and using odometry to localize the robot's position on the field then using A* pathfinding to find the best path to the tri-ball. The robot would then use its intake to pick up the tri-ball and place it under the net.
+To enable autonomous navigation, **we implemented A\* pathfinding**, an algorithm to find the shortest path between two points. The robot used the detected location of the tri-ball (from YOLO) and its own estimated position (from odometry) to plan a path to pick it up. The goal was for the robot to autonomously locate, pick up, and place the tri-ball under the net.
 
 ## Results
 
