@@ -2,46 +2,46 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Jacob Likins</title>
-    <link>http://localhost:1313/</link>
+    <link>http://localhost:58418/</link>
     <description>Recent content on Jacob Likins</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 01 Oct 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:58418/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>clemson_internship.txt</title>
-      <link>http://localhost:1313/projects/clemson_intern/</link>
+      <link>http://localhost:58418/projects/clemson_intern/</link>
       <pubDate>Tue, 01 Oct 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/projects/clemson_intern/</guid>
+      <guid>http://localhost:58418/projects/clemson_intern/</guid>
       <description>&lt;p&gt;Between my junior and senior year of high school, I interned at Clemson University&amp;rsquo;s International Center for Automotive Research (ICAR) in their robotics lab. I worked on a team of college students to create a robot that used machine learning to complete that year&amp;rsquo;s &lt;a href=&#34;https://www.vexrobotics.com/competition?srsltid=AfmBOopaRRBhTduATjxg90Smleq9xV1jfcVkNqG2RwVNgNpbg2HHuEAf&#34;&gt;VEX Robotics Competition challenge&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;h2 id=&#34;project-overview&#34;&gt;Project Overview&lt;/h2&gt;&#xA;&lt;p&gt;The goal of the project was to create a robot that could autonomously navigate a field and complete tasks such as picking up and placing objects, while also avoiding obstacles. We also wanted to create a VEX AI team for Clemson University to compete in.&lt;/p&gt;</description>
     </item>
     <item>
       <title>custom_PCBs.txt</title>
-      <link>http://localhost:1313/projects/pcb/</link>
+      <link>http://localhost:58418/projects/pcb/</link>
       <pubDate>Tue, 01 Oct 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/projects/pcb/</guid>
+      <guid>http://localhost:58418/projects/pcb/</guid>
       <description>&lt;p&gt;On my first year on &lt;a href=&#34;https://www.olinelectricmotorsports.com&#34;&gt;Olin&amp;rsquo;s Formula SAE Team&lt;/a&gt; I made three custom PCB boards for our electric car! I made our throttle board, precharge and discharge board, and our battery management system board.&lt;/p&gt;&#xA;&lt;h2 id=&#34;battery-management-systems-board&#34;&gt;Battery Management Systems Board&lt;/h2&gt;&#xA;&lt;p&gt;The first board I made was our battery management system (BMS) board. This board is responsible for monitoring the voltage and temperature of each cell in our battery pack, as well as balancing the cells to ensure they are all at the same voltage. This is important for the safety and longevity of our battery pack as well as ensuring that our battery does not overheat.&lt;/p&gt;</description>
     </item>
     <item>
       <title>remote_controlled_golf_cart.txt</title>
-      <link>http://localhost:1313/projects/remote_controlled_golfcart/</link>
+      <link>http://localhost:58418/projects/remote_controlled_golfcart/</link>
       <pubDate>Tue, 01 Oct 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/projects/remote_controlled_golfcart/</guid>
-      <description>&lt;p&gt;I worked on a golf cart project that could be controlled remotely using a xbox controller. I did this project, while I was a high school student at &lt;a href=&#34;https://www.scgssm.org/&#34;&gt;South Carolina Governor&amp;rsquo;s School for Science and Mathematics&lt;/a&gt; (GSSM). The project started before I started at GSSM, so I had to pick up where previous students left off.&lt;/p&gt;&#xA;&lt;div align=&#34;center&#34;&gt; &lt;img src=&#34;http://localhost:1313/images/golfcart/full_golfcart.jpg&#34; alt=&#34;Full view of the remote controlled golf cart&#34; width=&#34;400&#34; height=&#34;350&#34;&gt;&#xA;&lt;/div&gt;&#xA;&lt;h2 id=&#34;what-we-inherited&#34;&gt;What We Inherited&lt;/h2&gt;&#xA;&lt;p&gt;The previous students had made a lot of progress on the project, they had already acquired a golf cart and welded an actuator on the steering column to control the steering electronically as well as the brake pedal so everything could be controlled. They also planned a main control box that would connect the wiring throughout the golf cart in one central location. We were also given little documentation on how the previous students had wired the golf cart, so we figured out how to wire the golf cart by looking at the wiring diagram of the golf cart and using a multimeter to test the connections.&lt;/p&gt;</description>
+      <guid>http://localhost:58418/projects/remote_controlled_golfcart/</guid>
+      <description>&lt;p&gt;I worked on a golf cart project that could be controlled remotely using a xbox controller. I did this project, while I was a high school student at &lt;a href=&#34;https://www.scgssm.org/&#34;&gt;South Carolina Governor&amp;rsquo;s School for Science and Mathematics&lt;/a&gt; (GSSM). The project started before I started at GSSM, so I had to pick up where previous students left off.&lt;/p&gt;&#xA;&lt;div align=&#34;center&#34;&gt; &lt;img src=&#34;http://localhost:58418/images/golfcart/full_golfcart.jpg&#34; alt=&#34;Full view of the remote controlled golf cart&#34; width=&#34;400&#34; height=&#34;350&#34;&gt;&#xA;&lt;/div&gt;&#xA;&lt;h2 id=&#34;what-we-inherited&#34;&gt;What We Inherited&lt;/h2&gt;&#xA;&lt;p&gt;The previous students had made a lot of progress on the project, they had already acquired a golf cart and welded an actuator on the steering column to control the steering electronically as well as the brake pedal so everything could be controlled. They also planned a main control box that would connect the wiring throughout the golf cart in one central location. We were also given little documentation on how the previous students had wired the golf cart, so we figured out how to wire the golf cart by looking at the wiring diagram of the golf cart and using a multimeter to test the connections.&lt;/p&gt;</description>
     </item>
     <item>
       <title>type_race.txt</title>
-      <link>http://localhost:1313/projects/type_race/</link>
+      <link>http://localhost:58418/projects/type_race/</link>
       <pubDate>Tue, 01 Oct 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/projects/type_race/</guid>
+      <guid>http://localhost:58418/projects/type_race/</guid>
       <description>&lt;p&gt;Type-Race is an exciting typing game that my partner and I built. Played very similarly to the classic game &amp;ldquo;Type Racer&amp;rdquo;, it is built in Python using the &lt;code&gt;pygame&lt;/code&gt; library and is designed to help users improve their typing speed and accuracy in a fun, competitive way.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-game&#34;&gt;The Game&lt;/h2&gt;&#xA;&lt;p&gt;When the game starts, you have 60 seconds to copy as much of the prompt on your screen as you can. As you type, the prompt will scroll. If you make a mistake, no worries! Mistakes are underlined in red and can be fixed with the backspace key. In the top left, view the time remaining, your current words per minute, and your opponent&amp;rsquo;s words per minute (if playing multiplayer).&lt;/p&gt;</description>
     </item>
     <item>
       <title>About</title>
-      <link>http://localhost:1313/about/</link>
+      <link>http://localhost:58418/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/about/</guid>
-      <description>&lt;div style=&#34;display: flex; gap: 2rem; align-items: flex-start; flex-wrap: wrap;&#34;&gt;&#xA;  &lt;img src=&#34;http://localhost:1313/images/jacob.jpg&#34; style=&#34;width: 300px; border-radius: 8px;&#34; /&gt;&#xA;  &lt;div style=&#34;max-width: 600px;&#34;&gt;&#xA;    &lt;p&gt;Hi there! I&#39;m &lt;strong&gt;Jacob Likins&lt;/strong&gt;, an electrical and computer engineering student at &lt;a href=&#34;https://www.olin.edu&#34;&gt;Olin College&lt;/a&gt;, passionate about building impactful technology through hands-on engineering and collaborative innovation.&lt;/p&gt;&#xA;&#xA;    &lt;p&gt;I&#39;m the &lt;strong&gt;Electrical Lead&lt;/strong&gt; for our Formula SAE EV team, &lt;a href=&#34;https://www.olinelectricmotorsports.com&#34;&gt;Olin Electric Motorsports&lt;/a&gt;, where I lead the development of critical vehicle systems like battery management, throttle control, and high-voltage power electronics.&lt;/p&gt;&#xA;&#xA;    &lt;p&gt;I also conducted &lt;strong&gt;robotic simulation research at Clemson University&lt;/strong&gt;, modeling autonomous systems and exploring intelligent control in complex environments.&lt;/p&gt;</description>
+      <guid>http://localhost:58418/about/</guid>
+      <description>&lt;div style=&#34;display: flex; gap: 2rem; align-items: flex-start; flex-wrap: wrap;&#34;&gt;&#xA;  &lt;img src=&#34;http://localhost:58418/images/jacob.jpg&#34; style=&#34;width: 300px; border-radius: 8px;&#34; /&gt;&#xA;  &lt;div style=&#34;max-width: 600px;&#34;&gt;&#xA;    &lt;p&gt;Hi there! I&#39;m &lt;strong&gt;Jacob Likins&lt;/strong&gt;, an electrical and computer engineering student at &lt;a href=&#34;https://www.olin.edu&#34;&gt;Olin College&lt;/a&gt;, passionate about building impactful technology through hands-on engineering and collaborative innovation.&lt;/p&gt;&#xA;&#xA;    &lt;p&gt;I&#39;m the &lt;strong&gt;Electrical Lead&lt;/strong&gt; for our Formula SAE EV team, &lt;a href=&#34;https://www.olinelectricmotorsports.com&#34;&gt;Olin Electric Motorsports&lt;/a&gt;, where I lead the development of critical vehicle systems like battery management, throttle control, and high-voltage power electronics.&lt;/p&gt;&#xA;&#xA;    &lt;p&gt;I also conducted &lt;strong&gt;robotic simulation research at Clemson University&lt;/strong&gt;, modeling autonomous systems and exploring intelligent control in complex environments.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
