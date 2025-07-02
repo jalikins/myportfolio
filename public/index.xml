@@ -16,6 +16,13 @@
       <description>&lt;p&gt;Between my junior and senior year of high school, I interned at Clemson University&amp;rsquo;s International Center for Automotive Research (ICAR) in their robotics lab. I worked on a team of college students to create a robot that used machine learning to complete that year&amp;rsquo;s &lt;a href=&#34;https://www.vexrobotics.com/competition?srsltid=AfmBOopaRRBhTduATjxg90Smleq9xV1jfcVkNqG2RwVNgNpbg2HHuEAf&#34;&gt;VEX Robotics Competition challenge&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;h2 id=&#34;project-overview&#34;&gt;Project Overview&lt;/h2&gt;&#xA;&lt;p&gt;The goal of the project was to create a robot that could autonomously navigate a field and complete tasks such as picking up and placing objects, while also avoiding obstacles. We also wanted to create a VEX AI team for Clemson University to compete in.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>client_website.txt</title>
+      <link>http://localhost:1313/projects/website_design/</link>
+      <pubDate>Tue, 01 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/website_design/</guid>
+      <description>&lt;p&gt;I developed a fully custom website for &lt;strong&gt;Will&amp;rsquo;s Remodeling&lt;/strong&gt;, focusing on creating a modern, responsive, and high-performance online presence. This project involved close collaboration with the client to meet their specific qualifications and deliver a product that perfectly matched their vision.&lt;/p&gt;&#xA;&lt;h2 id=&#34;project-goals&#34;&gt;Project Goals&lt;/h2&gt;&#xA;&lt;p&gt;The primary goal was to create a professional portfolio and increase online presence for a local remodeling company to build trust between the company and potential clients. Key requirements included:&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>custom_PCBs.txt</title>
       <link>http://localhost:1313/projects/pcb/</link>
       <pubDate>Tue, 01 Oct 2024 00:00:00 +0000</pubDate>

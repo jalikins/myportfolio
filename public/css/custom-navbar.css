@@ -10,8 +10,6 @@
     right: 20px;           /* Distance from the right of the viewport */
     z-index: 1000;         /* Ensures it stays on top of other content */
 
-    /* You might want to remove any previous text-align or display: inline-block 
-       that was making it centered or full-width */
 }
 
 /* Remove any width constraints if you had them to make it full width before */
@@ -19,7 +17,6 @@
     /* No specific styles needed here for a small corner navbar unless you want to constrain it further */
 }
 
-/* The brand link is removed from HTML, so no CSS needed for .navbar-brand */
 
 .custom-navbar ul {
     list-style-type: none;
@@ -41,7 +38,7 @@
     color: #fff;
     text-decoration: none;
     display: block; /* Makes the entire block clickable */
-    padding: 5px 10px; /* Padding within each link */
+    padding: 5px 10px; 
 }
 
 .custom-navbar ul li a:hover {
