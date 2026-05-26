@@ -1,0 +1,75 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import HorizontalCard from "../components/HorizontalCard.astro";
+import { getCollection } from "astro:content";
+import createSlug from "../lib/createSlug"
+
+const posts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const last_posts = posts.slice(0, 3);
+---
+
+<BaseLayout sideBarActiveItemID="home">
+  <div class="pb-12 mt-5">
+    <div class="text-xl py-1">Hey there</div>
+    <div class="text-5xl font-bold">I'm Jacob Likins</div>
+    <div class="text-3xl py-3 font-bold">Electrical & Computing Engineering Student</div>
+    <div class="py-2">
+      <text class="text-lg">
+        I am an ECE student at <b>Olin College of Engineering</b> (Class of 2028) passionate about building impactful technology. I am heavily involved in <b>Olin's Formula SAE team,</b> where I <b>lead the electrical systems design, integration, and firmware development.</b> I also have experience in software development, web design, and research in autonomous systems. I am interested in the intersection of hardware and software, and I am always looking for opportunities to learn and grow. Feel free to explore my projects and blog posts to see what I've been working on!
+      </text>
+    </div>
+    <div class="mt-8">
+      <a class="btn" href="/contact"> Let's connect!</a>
+      <a href="https://github.com/jalikins" target="_blank" class="btn btn-outline ml-5">
+        Check out my GitHub
+      </a>
+    </div>
+  </div>
+
+  <div>
+    <div class="text-3xl w-full font-bold mb-2">Featured Projects {"</>"}</div>
+  </div>
+
+  <HorizontalCard
+    title="Olin Electric Motorsports (Formula SAE)"
+    img="/images/pcb/bms.png"
+    desc="Custom PCB design and hardware integration using KiCad for critical vehicle systems, including battery management and throttle control."
+    url="/project/example.md"
+    badge="Electrical Lead"
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="Autonomous Robotic Simulation"
+    img="/images/clemson/cad_image.png"
+    desc="Robotic simulation research conducted at Clemson University, modeling autonomous systems and exploring intelligent control in complex environments."
+    url="/project/example.md"
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="Remote Controlled Golf Cart"
+    img="/images/golfcart/full_golfcart.jpg"
+    desc="Designed and integrated the electronic control systems, custom motherboards, and power distribution for a remote-controlled golf cart."
+    url="/project/example.md"
+  />
+
+  <div>
+    <div class="text-3xl w-full font-bold mb-5 mt-10">Latest Updates</div>
+  </div>
+
+  {
+    last_posts.map((post) => (
+      <>
+        <HorizontalCard
+          title={post.data.title}
+          img={post.data.heroImage}
+          desc={post.data.description}
+          url={"/blog/" + createSlug(post.data.title, post.slug)}
+          target="_self"
+          badge={post.data.badge}
+        />
+        <div class="divider my-0" />
+      </>
+    ))
+  }
+</BaseLayout>

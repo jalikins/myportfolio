@@ -1,0 +1,32 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Resume PDF Preview" sideBarActiveItemID="resume">
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Resume</div>
+  </div>
+
+  <div class="mb-10 text-justify">
+    Below is a preview of my resume. You can read it here or download a copy.
+  </div>
+
+  <div class="w-full h-[800px] border border-base-300 shadow-xl rounded-xl overflow-hidden mb-8">
+    <iframe 
+      src="/JacobA.pdf" 
+      width="100%" 
+      height="100%" 
+      style="border: none;"
+      title="Jacob Likins Resume"
+    >
+      <p>It appears your browser does not support inline PDFs. 
+      <a href="/JacobA.pdf" class="link">Click here to download the PDF</a>.</p>
+    </iframe>
+  </div>
+  
+  <div class="mt-8 flex justify-center">
+    <a href="/JacobA.pdf" download="Jacob_Likins_Resume.pdf" class="btn btn-outline">
+      Download PDF
+    </a>
+  </div>
+</BaseLayout>

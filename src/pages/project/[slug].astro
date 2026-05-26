@@ -1,0 +1,33 @@
+---
+import { CollectionEntry, getCollection } from 'astro:content';
+import PostLayout from '../../layouts/PostLayout.astro';
+import createSlug from '../../lib/createSlug'
+
+export async function getStaticPaths() {
+    // Tell Astro to fetch all markdown files from your new 'projects' folder
+    const projectEntries = await getCollection('projects');
+    return projectEntries.map(entry => ({
+        params: { slug: createSlug(entry.data.title, entry.slug) }, 
+        props: { entry },
+    }));
+}
+
+interface Props {
+    entry: CollectionEntry<'projects'>;
+}
+
+const { entry } = Astro.props;
+const project = entry.data;
+const { Content } = await entry.render();
+---
+
+<PostLayout
+    title={project.title}
+    description={project.description}
+    pubDate={project.pubDate}
+    heroImage={project.heroImage}
+    updatedDate={project.updatedDate}
+    badge={project.badge}
+>
+    <Content />
+</PostLayout>

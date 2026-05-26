@@ -1,0 +1,115 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import TimeLineElement from "../components/cv/TimeLine.astro";
+---
+
+<BaseLayout title="Resume" sideBarActiveItemID="cv">
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Profile</div>
+  </div>
+
+  <div class="mb-10 text-justify">
+    I am an Electrical and Computing Engineering (ECE) student at Olin College of Engineering (Class of 2028), driven by a passion for hands-on hardware integration and collaborative innovation. As the Electrical Lead for Olin Electric Motorsports, I oversee the design and implementation of complex high-voltage systems. I thrive in environments that blend physical engineering with embedded intelligence, leveraging tools like KiCad, MATLAB, and high-precision manufacturing to build impactful technology.
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Education</div>
+  </div>
+
+  <div class="time-line-container grid gap-4 mb-10">
+    <TimeLineElement
+      title="Olin College of Engineering"
+      subtitle="Class of 2028 | B.S. in Electrical and Computing Engineering"
+    >
+      <ul class="list-disc ml-5">
+        <li>Actively coordinating on academic integrity and course assignments with faculty.</li>
+        <li>Currently applying for Spring 2027 study abroad programs in Nagoya, Japan.</li>
+      </ul>
+    </TimeLineElement>
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Experience</div>
+  </div>
+
+  <div class="time-line-container mb-10">
+    <TimeLineElement
+      title="Electrical Engineering Intern"
+      subtitle="May 2026 - July 2026 at Asensus Surgical, Durham, NC"
+    >
+      Incoming intern contributing to advanced medical robotics and electrical engineering initiatives.
+    </TimeLineElement>
+    
+    <TimeLineElement
+      title="Electrical Lead"
+      subtitle="Olin Electric Motorsports (Formula SAE)"
+    >
+      <ul class="list-disc ml-5">
+        <li>Directing the design and integration of critical electric vehicle subsystems, including high-voltage power electronics, throttle control, and battery management systems.</li>
+        <li>Managing technical development and documentation within the team's monorepo architecture.</li>
+      </ul>
+    </TimeLineElement>
+
+    <TimeLineElement
+      title="Academic Resource Co-Designer (ARC) & Student Shop Assistant"
+      subtitle="August 2025 - May 2026 at Olin College of Engineering"
+    >
+      <ul class="list-disc ml-5">
+        <li>Specialized in the electrical prototyping room, supporting peers with high-precision manufacturing tools.</li>
+        <li>Maintained lab equipment and evaluated pick-and-place machines for PCB assembly.</li>
+      </ul>
+    </TimeLineElement>
+
+    <TimeLineElement
+      title="Robotics Simulation Researcher"
+      subtitle="Clemson University"
+    >
+      Conducted robotic simulation research, modeling autonomous systems and exploring intelligent control mechanisms in complex environments.
+    </TimeLineElement>
+
+    <TimeLineElement
+      title="Past Employment"
+      subtitle="Coca-Cola Consolidated"
+    >
+      Gained foundational professional experience and teamwork skills in a fast-paced operational environment.
+    </TimeLineElement>
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Projects & Initiatives</div>
+  </div>
+
+  <div class="time-line-container mb-10">
+    <TimeLineElement
+      title="Embedded Hardware & Data Logging"
+      subtitle="Independent Academic Work"
+    >
+      Designed a custom Raspberry Pi script engineered specifically as a blocking process for continuous data logging in hardware experiments.
+    </TimeLineElement>
+    <TimeLineElement
+      title="Mobile Watchmaking Workshop"
+      subtitle="Personal Initiative"
+    >
+      Developed project requirements and accessibility initiatives to teach watch assembly to diverse audiences, promoting watchmaking as an accessible hobby.
+    </TimeLineElement>
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Skills</div>
+  </div>
+
+  <ul class="list-disc md:columns-5 columns-2 mx-6">
+    <li>KiCad PCB Design</li>
+    <li>Hardware Integration</li>
+    <li>High-Voltage Systems</li>
+    <li>Embedded Firmware</li>
+    <li>SPI Communication</li>
+    <li>MATLAB</li>
+    <li>Signal Processing</li>
+    <li>Data Analysis</li>
+    <li>Raspberry Pi</li>
+    <li>Laser Cutters</li>
+    <li>Pick-and-Place Assembly</li>
+    <li>Git / Monorepo</li>
+  </ul>
+</BaseLayout>

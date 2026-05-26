@@ -1,0 +1,46 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import HorizontalCard from "../components/HorizontalCard.astro";
+---
+
+<BaseLayout title = "Projects" sideBarActiveItemID="projects">
+  <div>
+    <div class="text-3xl w-full font-bold mb-5">Engineering & Hardware Projects</div>
+  </div>
+
+  <HorizontalCard
+    title="Olin Electric Motorsports - EV Systems"
+    img="/pcb/bms.png"
+    desc="Designed and integrated critical vehicle systems including the Battery Management System (BMS), throttle control, and precharge circuits using KiCad."
+    url="/project/example.md"
+    badge="Formula SAE"
+  />
+  <div class="divider my-0"></div>
+  
+  <HorizontalCard
+    title="Remote Controlled Golf Cart"
+    img="/golfcart/full_golfcart.jpg"
+    desc="Engineered the electronic control systems, custom motherboards, and power distribution mapping to convert a standard golf cart into a fully remote-controlled vehicle."
+    url="/project/example.md"
+  />
+  <div class="divider my-0"></div>
+  
+  <HorizontalCard
+    title="Autonomous Robotic Simulation"
+    img="/clemson/cad_image.png"
+    desc="Conducted research at Clemson University modeling autonomous systems, pathfinding algorithms, and intelligent control environments using Isaac Sim."
+    url="/project/example.md"
+    badge="Research"
+  />
+
+  <div>
+    <div class="text-3xl w-full font-bold mb-5 mt-10">Software & Web Projects</div>
+  </div>
+
+  <HorizontalCard
+    title="Personal Portfolio Architecture"
+    img="/website/home_page.png"
+    desc="Developed a dynamic, component-based personal portfolio website focused on clean UI/UX, fast load times, and responsive design."
+    url="/project/example.md"
+  />
+</BaseLayout>

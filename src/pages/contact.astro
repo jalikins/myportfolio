@@ -1,0 +1,60 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Contact" sideBarActiveItemID="contact">
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Get in Touch</div>
+  </div>
+
+  <div class="mb-10 text-justify">
+    <p class="mb-4">
+      Whether you have a question about my hardware projects, want to discuss an engineering opportunity, or just want to say hi, feel free to reach out using the form below!
+    </p>
+    <p>
+      Prefer direct email? You can always reach me at: 
+      <a href="mailto:jacobalikins@gmail.com" class="link link-primary font-bold">jacobalikins@gmail.com</a>
+    </p>
+  </div>
+
+  <div class="bg-base-200 p-6 rounded-xl shadow-lg max-w-2xl">
+    <form 
+      name="contact" 
+      method="POST" 
+      data-netlify="true" 
+      netlify-honeypot="bot-field"
+      class="flex flex-col gap-4"
+    >
+      <input type="hidden" name="form-name" value="contact" />
+      
+      <p class="hidden">
+        <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+      </p>
+
+      <div class="form-control w-full">
+        <label class="label">
+          <span class="label-text font-semibold">Your Name</span>
+        </label>
+        <input type="text" name="name" placeholder="John Doe" class="input input-bordered w-full" required />
+      </div>
+
+      <div class="form-control w-full">
+        <label class="label">
+          <span class="label-text font-semibold">Your Email</span>
+        </label>
+        <input type="email" name="email" placeholder="john@example.com" class="input input-bordered w-full" required />
+      </div>
+
+      <div class="form-control w-full">
+        <label class="label">
+          <span class="label-text font-semibold">Message</span>
+        </label>
+        <textarea name="message" class="textarea textarea-bordered h-32 w-full" placeholder="What would you like to discuss?" required></textarea>
+      </div>
+
+      <div class="mt-4">
+        <button type="submit" class="btn btn-primary w-full md:w-auto">Send Message</button>
+      </div>
+    </form>
+  </div>
+</BaseLayout>
