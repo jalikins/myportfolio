@@ -20,21 +20,21 @@ Type-Race is a competitive, multiplayer typing application built entirely in Pyt
 ## The Engineering Process
 
 ### 1. Software Architecture (MVC)
-To ensure a well-organized and highly scalable codebase, we built the game using a strict Model-View-Controller (MVC) framework:
-* **The Model:** Encapsulates the core game logic, managing the text prompts, calculating the live Words Per Minute (WPM), and validating typed characters against the target string.
+We wanted to keep the code scalable and clean so, we built the game using a strict Model-View-Controller (MVC) framework:
+* **The Model:** This holds the core game logic, managing the text prompts, calculating the live Words Per Minute (WPM), and validating typed characters against the target string.
 * **The View:** Renders the game state to the user interface at a high frame rate, dynamically rendering scrolling text, highlighting incorrect characters in red, and displaying live timer updates.
 * **The Controller:** Captures and routes asynchronous keyboard inputs to the model without interrupting the visual rendering loop.
 
 ### 2. Real-Time Input & UI Feedback
-Creating a smooth typing experience required precise input handling. The prompt dynamically scrolls as the user types, and the system instantly flags errors with a visual red underline. Users cannot proceed until the error is corrected using the backspace key, enforcing accuracy over sheer speed. 
+The prompt scrolls as the user types, and the system instantly flags errors with a visual red underline. 
 
 ![Type Race Gameplay](/projects/type_race/gameplay.png)
 *Caption: The primary user interface displaying the scrolling prompt, timer, and live WPM tracking.*
 
 ### 3. Multiplayer TCP Socket Networking
-The most complex engineering challenge was facilitating real-time competition between two separate machines over a local network. We implemented a robust Client-Server architecture utilizing TCP sockets:
+The most complex engineering challenge was real-time competition between two separate machines over a local network. We implemented a Client-Server architecture utilizing TCP sockets:
 1. **Connection Protocol:** One instance initiates a server (Host) listening for incoming connections, while the second instance (Client) connects and signals a ready state.
-2. **Asynchronous Threading:** To prevent network latency from lagging or blocking the high-speed `pygame` rendering loop, we implemented threading. The network communication runs asynchronously, transmitting only essential data (the player's live WPM) to keep packet sizes incredibly small.
+2. **Asynchronous Threading:** To prevent network latency from lagging or blocking the high-speed `pygame` rendering loop, we used threading. The network communication runs asynchronously, transmitting only essential data (the player's live WPM) to keep packet sizes incredibly small.
 3. **Resolution:** At the 60-second mark, the models on both machines independently compare the final corrected WPMs to determine and display the winner.
 
 ---
