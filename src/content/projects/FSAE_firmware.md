@@ -3,7 +3,7 @@ title: "FSAE Firmware"
 description: "Led the firmware transition to an STM32G4 architecture and developed a custom CAN bootloader for rapid vehicle flashing."
 pubDate: "June 2026"
 heroImage: "/projects/folder_name/main_cover_image.jpg"
-badge: "Hardware / Software / Research"
+badge: "Embedded Systems"
 ---
 
 ## Overview

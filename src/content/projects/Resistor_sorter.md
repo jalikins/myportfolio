@@ -7,13 +7,13 @@ badge: "PCB Design"
 ---
 
 ## Overview
-As part of Olin College's Principles of Integrated Engineering (PIE) course, I collaborated on a 6-person multidisciplinary team to build "The Resistance"—an electromechanical system designed to automatically singulate, measure, and sort bulk resistors into specific bins based on their ohm values. 
+I collaborated on a 6-person multidisciplinary team to build resistor sorter. It is a electromechanical system designed to automatically measure, and sort bulk resistors into specific bins based on their ohm values. 
 
 ## My Role & The Tech Stack
-* **Role:** Electrical & Systems Engineer
-* **Hardware:** KiCad, Custom PCB, [Arduino / ESP32], [A4988 Stepper Drivers / Servos]
-* **Software:** C++, Serial Debugging
-* **Skills:** Analog-to-Digital Conversion (ADC), Hardware Debugging, Multidisciplinary Integration
+* **Role:** Electrical & Firmware Engineer
+* **Hardware:** KiCad, Custom PCB, AVR MCU, Stepper Motor, 12 linear actuators
+* **Software:** C, Serial Debugging, python
+* **Skills:** Analog-to-Digital Conversion (ADC), Hardware Debugging, Multidisciplinary Integration, Power distribution
 
 ---
 
