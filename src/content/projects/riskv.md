@@ -1,8 +1,8 @@
 ---
-title: "RISC32I Processor FPGA Implementation"
+title: "RISC32 Processor with FPGA Implementation"
 description: "Designed and implemented a custom multicycle RISC-V processor architecture in SystemVerilog, deployed to an FPGA to execute custom assembly logic."
 pubDate: "December 2025"
-heroImage: "/post_img.webp"
+heroImage: "/risc/block.svg"
 badge: "Computer Architecture"
 ---
 
