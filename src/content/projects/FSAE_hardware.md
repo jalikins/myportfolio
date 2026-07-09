@@ -1,5 +1,5 @@
 ---
-title: "FSAE Hardware Architecture"
+title: "FSAE Hardware"
 description: "Designed and routed custom PCBs for critical electric vehicle subsystems, including the BMS, throttle, and high-voltage precharge circuits."
 pubDate: "May 2025"
 heroImage: "/hardware/giant_block.png"
