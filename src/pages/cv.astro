@@ -9,7 +9,7 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
   </div>
 
   <div class="mb-10 text-justify">
-    I am an Electrical and Computing Engineering (ECE) student at Olin College of Engineering (Class of 2028), driven by a passion for hands-on hardware integration and collaborative innovation. As the Electrical Lead for Olin Electric Motorsports, I oversee the design and implementation of complex high-voltage systems. I thrive in environments that blend physical engineering with embedded intelligence, leveraging tools like KiCad, MATLAB, and high-precision manufacturing to build impactful technology.
+I am an Electrical and Computing Engineering (ECE) student at Olin College of Engineering (Class of 2028), that enjoys collaborating and solving complex problems. As the Electrical/Firmware Lead for Olin Electric Motorsports, I oversee design and implementation of high and low voltage control systems. I enjoy the blend of hardware and software with a focus on software.
   </div>
 
   <div class="mb-5">
@@ -22,8 +22,12 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
       subtitle="Class of 2028 | B.S. in Electrical and Computing Engineering"
     >
       <ul class="list-disc ml-5">
-        <li>Actively coordinating on academic integrity and course assignments with faculty.</li>
-        <li>Currently applying for Spring 2027 study abroad programs in Nagoya, Japan.</li>
+        <li>Received Olin Merit Scholarship.</li>
+        <li>Relevant Coursework
+          <ul class="list-disc ml-5">
+            <li>Software Design, Micro Electronics, Computer Architecture, Signals, Integrated Engineering Design, Linear Algebra, Project Management, Calculus I, II, and III, MATLAB, Discrete, Collaborative Design</li>
+          </ul>
+        </li>
       </ul>
     </TimeLineElement>
   </div>
@@ -35,45 +39,58 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
   <div class="time-line-container mb-10">
     <TimeLineElement
       title="Electrical Engineering Intern"
-      subtitle="May 2026 - July 2026 at Asensus Surgical, Durham, NC"
+      subtitle="May 2026 - August 2026 at Asensus Surgical (Subsidiary of Karl Storz), Morrisville, NC"
     >
-      Incoming intern contributing to advanced medical robotics and electrical engineering initiatives.
+      <ul class="list-disc ml-5">
+        <li>Engineered and debugged custom PCBs designed in <strong>Altium</strong> to manage inrush current on robotic arms, ensuring <strong>IEC 60601</strong> compliance for deployment.</li>
+        <li>Integrated embedded firmware for <strong>STM32</strong> microcontroller to drive haptic feedback from <strong>EtherCAT</strong>, establishing <strong>I2C</strong> communication with peripheral driver.</li>
+        <li>Designed complex hardware schematics in <strong>Altium</strong>, balancing power delivery and footprint constraints.</li>
+      </ul>
     </TimeLineElement>
     
     <TimeLineElement
-      title="Electrical Lead"
-      subtitle="Olin Electric Motorsports (Formula SAE)"
+      title="Electrical & Software Co-Lead, Senior Engineer"
+      subtitle="September 2024 - Present at Olin Electric Motorsports (Formula SAE)"
     >
       <ul class="list-disc ml-5">
-        <li>Directing the design and integration of critical electric vehicle subsystems, including high-voltage power electronics, throttle control, and battery management systems.</li>
-        <li>Managing technical development and documentation within the team's monorepo architecture.</li>
+        <li>Architected a modular C firmware monorepo using <strong>Bazel</strong> for a distributed network of <strong>STM32</strong> microcontrollers, streamlining the vehicle's build process.</li>
+        <li>Integrated <strong>YAML</strong>-based automation into the build pipeline to standardize <strong>CAN</strong> bus initialization across all hardware nodes with a truth <strong>DBC</strong> file.</li>
+        <li>Built custom bootloader enabling over-the-air (OTA) flashing of <strong>STM32</strong> chips via <strong>CAN</strong> protocol.</li>
+        <li>Contributed to high-voltage battery PCBs in <strong>KiCad</strong>, including an <strong>isoSPI</strong>-based <strong>BMS</strong> controller and 6-segment power thermistor boards for cell voltage and thermal data.</li>
+        <li>Led a 24-member electrical and firmware team through the design, construction, and testing of a <strong>Formula SAE</strong> electric vehicle.</li>
       </ul>
     </TimeLineElement>
 
     <TimeLineElement
-      title="Academic Resource Co-Designer (ARC) & Student Shop Assistant"
-      subtitle="August 2025 - May 2026 at Olin College of Engineering"
+      title="Embedded Systems TA & Electrical Shop Assistant"
+      subtitle="January 2026 - Present at Olin College of Engineering"
     >
       <ul class="list-disc ml-5">
-        <li>Specialized in the electrical prototyping room, supporting peers with high-precision manufacturing tools.</li>
-        <li>Maintained lab equipment and evaluated pick-and-place machines for PCB assembly.</li>
+        <li>Developed curriculum and graded assignments to teach students the fundamentals of microcontroller firmware, toolchains, <strong>RTOS</strong>, and <strong>GDB</strong>.</li>
+        <li>Maintained testing equipment, including oscilloscopes, <strong>DMMs</strong>, and logic analyzers, and conducted technical tool training.</li>
       </ul>
     </TimeLineElement>
 
     <TimeLineElement
-      title="Robotics Simulation Researcher"
-      subtitle="Clemson University"
+      title="Web Development Freelancer"
+      subtitle="May 2025 - August 2025"
     >
-      Conducted robotic simulation research, modeling autonomous systems and exploring intelligent control mechanisms in complex environments.
+      <ul class="list-disc ml-5">
+        <li>Built a contractor website with <strong>HTML/CSS/JS</strong> that generated 185 sessions and 6+ leads within 90 days.</li>
+        <li>Developed user-centric site architectures to improve accessibility for core business services.</li>
+      </ul>
     </TimeLineElement>
 
     <TimeLineElement
-      title="Past Employment"
-      subtitle="Coca-Cola Consolidated"
+      title="Research Intern"
+      subtitle="May 2023 - July 2023 at Clemson University Center for Automotive Research"
     >
-      Gained foundational professional experience and teamwork skills in a fast-paced operational environment.
+      <ul class="list-disc ml-5">
+        <li>Created an autonomous robot utilizing <strong>SolidWorks</strong>, <strong>VEX</strong> components, and <strong>C++</strong> for precise motor and sensor control.</li>
+        <li>Simulated robot in <strong>NVIDIA's Isaac Simulator</strong> to train the system for object manipulation.</li>
+      </ul>
     </TimeLineElement>
-  </div>
+</div>
 
   <div class="mb-5">
     <div class="text-3xl w-full font-bold">Projects & Initiatives</div>

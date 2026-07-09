@@ -9,6 +9,8 @@ badge: "Embedded Systems"
 ## Overview
 As the Electrical Lead for Olin Electric Motorsports, I recognized that siloing our firmware and hardware designs across dozens of separate repositories was creating massive integration bottlenecks. To solve this, I architected and deployed a unified **Monorepo** from the ground up. This system serves as the single source of truth for all vehicle firmware, shared C libraries, custom KiCad PCB footprints, and continuous integration testing.
 
+[Monorepo](https://github.com/olin-electric-motorsports/oem-monorepo)
+
 ## My Role & The Tech Stack
 * **Role:** Systems Architect & Firmware Lead
 * **Build System:** Bazel, OpenOCD, GDB, GNU Make

@@ -1,124 +1,91 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import HorizontalCard from "../components/HorizontalCard.astro";
+import VerticalCard from "../components/VerticalCard.astro";
 ---
 
-<BaseLayout title="Projects" sideBarActiveItemID="projects">
-
-  <div>
-    <div class="text-3xl w-full font-bold mb-5">Formula SAE Engineering</div>
+<BaseLayout title="Projects" sideBarActiveItemID="projects" fullWidth={true}>
+  <div class="mb-10">
+    <h1 class="text-4xl font-bold">Engineering Portfolio</h1>
   </div>
 
-  <HorizontalCard
-    title="FSAE High-Voltage Hardware Architecture"
-    img="/pcb/bms.png"
-    desc="Designed and integrated custom KiCad PCBs for critical electric vehicle subsystems, including the BMS, throttle, and precharge circuits."
-    url="/project/fsae-hardware-architecture"
-    badge="Hardware Lead"
-  />
-  <div class="divider my-0"></div>
-  
-  <HorizontalCard
-    title="FSAE Firmware Monorepo Integration"
-    img="/pcb/service_section.png"
-    desc="Led the firmware transition to an STM32G4 architecture and developed a custom CAN bootloader for rapid vehicle flashing."
-    url="/project/fsae-firmware-monorepo-integration"
-    badge="Embedded Systems"
-  />
-  <div class="divider my-0"></div>
-
-  <HorizontalCard
-    title="Electrical Lead Olin Electric Motorsports"
-    img="/profile.webp"
-    desc="Directed a 20-person engineering team to design, review, and integrate the electrical systems for a competitive Formula SAE vehicle."
-    url="/project/electrical-lead-olin-electric-motorsports"
-    badge="Leadership"
-  />
-
-  <div>
-    <div class="text-3xl w-full font-bold mb-5 mt-10">Professional & Academic Research</div>
+  <div class="mb-14">
+    <h2 class="text-3xl font-bold mb-6 border-b border-base-300 pb-2">Formula SAE & Vehicle Integration</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <VerticalCard
+        title="FSAE Hardware Architecture"
+        img="/hardware/giant_block.png"
+        desc="Designed and routed custom PCBs for critical electric vehicle subsystems, including the BMS, throttle, and high-voltage precharge circuits."
+        url="/project/FSAE_hardware"
+        badge="PCB, High-Voltage, KiCad"
+      />
+      <VerticalCard
+        title="FSAE Firmware Monorepo"
+        img="/pcb/service_section.png"
+        desc="Architected a Bazel-based monorepo to unify firmware development, automated CAN code generation, and PCB design."
+        url="/project/FSAE_firmware"
+        badge="Embedded, Python, CI/CD"
+      />
+      <VerticalCard
+        title="Electrical Lead Olin Electric Motorsports"
+        img="/leadership/team.jpg"
+        desc="Co-directed a 20-person electrical engineering team, overseeing firmware architecture, hardware design reviews, and cross-functional integration."
+        url="/project/FSAE_leadership"
+        badge="Leadership, Project Management"
+      />
+    </div>
   </div>
 
-  <HorizontalCard
-    title="Surgical Robotics Engineering"
-    img="/post_img.webp"
-    desc="Contributing to advanced medical robotics and electrical engineering initiatives in a professional clinical technology environment."
-    url="/project/surgical-robotics-engineering"
-    badge="Asensus Surgical"
-  />
-  <div class="divider my-0"></div>
-
-  <HorizontalCard
-    title="Autonomous Robotic Simulation"
-    img="/clemson/cad_image.png"
-    desc="Modeled autonomous systems and evaluated intelligent control environments utilizing pathfinding algorithms in Isaac Sim."
-    url="/project/autonomous-robotic-simulation"
-    badge="Clemson University"
-  />
-
-  <div>
-    <div class="text-3xl w-full font-bold mb-5 mt-10">Hardware & Prototyping</div>
+  <div class="mb-14">
+    <h2 class="text-3xl font-bold mb-6 border-b border-base-300 pb-2">Robotics & Embedded Systems</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <VerticalCard
+        title="RISC32I Processor FPGA"
+        img="/risc/simulation.png"
+        desc="Designed a custom multicycle RISC-V processor architecture in SystemVerilog, deployed to an FPGA."
+        url="/project/riskv"
+        badge="Computer Architecture"
+      />
+      <VerticalCard
+        title="Automated Resistor Sorter"
+        img="/post_img.webp"
+        desc="Designed custom PCB and electromechanical control systems for an automated resistor sorting machine."
+        url="/project/Resistor_sorter"
+        badge="Mechatronics"
+      />
+      <VerticalCard
+        title="Clemson Robotics Research"
+        img="/clemson/final_image.png"
+        desc="Modeled autonomous systems and evaluated intelligent control environments utilizing pathfinding algorithms in NVIDIA Isaac Sim."
+        url="/project/Clemson_internship"
+        badge="Research"
+      />
+      <VerticalCard
+        title="3D Scanner Project"
+        img="/3d_scanner/3d_scanner_white_bg.png"
+        desc="Developed a structured-light 3D scanning system, including hardware calibration and point-cloud processing."
+        url="/project/3d_scanner"
+        badge="Computer Vision"
+      />
+    </div>
   </div>
 
-  <HorizontalCard
-    title="Automated 3D Spatial Scanner"
-    img="/post_img.webp"
-    desc="Engineered a custom camera movement system and programmed automated spatial data plotting using MATLAB."
-    url="/project/automated-3d-spatial-scanner"
-  />
-  <div class="divider my-0"></div>
-
-  <HorizontalCard
-    title="RISC32I Processor FPGA Implementation"
-    img="/post_img.webp"
-    desc="Designed and implemented a custom RISC-V architecture and memory data representation on FPGA hardware."
-    url="/project/risc32i-processor-fpga-implementation"
-    badge="Computer Architecture"
-  />
-  <div class="divider my-0"></div>
-
-  <HorizontalCard
-    title="Automated Resistor Sorter"
-    img="/post_img.webp"
-    desc="Collaborated on a 6-person team to design a custom PCB for component sorting, documenting rapid iteration and hardware debugging processes."
-    url="/project/automated-resistor-sorter"
-    badge="PCB Design"
-  />
-  <div class="divider my-0"></div>
-
-  <HorizontalCard
-    title="Autonomous Line-Following Robot"
-    img="/post_img.webp"
-    desc="Developed a responsive robotics platform utilizing custom sensor integration and control logic for autonomous navigation."
-    url="/project/autonomous-line-following-robot"
-  />
-  <div class="divider my-0"></div>
-
-  <HorizontalCard
-    title="Remote-Controlled Vehicle Conversion"
-    img="/golfcart/full_golfcart.jpg"
-    desc="Engineered custom motherboards and mapped power distribution to convert a standard golf cart into a remote-operated vehicle."
-    url="/project/remote-controlled-vehicle-conversion"
-  />
-
-  <div>
-    <div class="text-3xl w-full font-bold mb-5 mt-10">Software & Web Development</div>
+  <div class="mb-14">
+    <h2 class="text-3xl font-bold mb-6 border-b border-base-300 pb-2">Software & Web Tools</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <VerticalCard
+        title="Web Design Portfolio"
+        img="/website/home_page.png"
+        desc="Customized an Astro-based portfolio site with optimized responsive layouts and 3D model integration."
+        url="/project/Web_design"
+        badge="Web Dev"
+      />
+      <VerticalCard
+        title="Type Race Game"
+        img="/itemPreview.webp"
+        desc="Built a fast-paced typing racing game with real-time stat tracking."
+        url="/project/type_race"
+        badge="Software"
+      />
+    </div>
   </div>
-
-  <HorizontalCard
-    title="Type Race Application"
-    img="/itemPreview.webp"
-    desc="Developed a responsive typing speed application focusing on real-time input validation, asynchronous networking, and performance tracking."
-    url="/project/type-race-application"
-    badge="Python / Sockets"
-  />
-  <div class="divider my-0"></div>
-
-  <HorizontalCard
-    title="Contractor Portfolio Platform"
-    img="/website/home_page.png"
-    desc="Designed and deployed a high-performance business website for an independent contractor, focusing on SEO and clean UI/UX."
-    url="/project/contractor-portfolio-platform"
-  />
-
 </BaseLayout>
