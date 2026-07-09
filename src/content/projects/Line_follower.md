@@ -1,11 +1,11 @@
 ---
-title: "Autonomous Line-Following Robot"
+title: "Autonomous Line Following Robot"
 description: "Developed a closed-loop PID control system utilizing a 4-sensor IR array to enable high-speed autonomous navigation."
 pubDate: "October 2024"
 heroImage: "/post_img.webp"
 badge: "Robotics"
 ---
-
+This is still work in progress
 ## Overview
 This project involved developing a two-wheeled autonomous robotic platform capable of navigating a complex track as quickly as possible. The engineering challenge was integrating real-time physical sensors with a closed-loop control algorithm to adjust the vehicle's trajectory at high speeds.
 

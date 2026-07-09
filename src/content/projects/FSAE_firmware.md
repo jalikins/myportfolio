@@ -1,5 +1,5 @@
 ---
-title: "FSAE Firmware Monorepo Integration"
+title: "FSAE Firmware Monorepo"
 description: "Architected a Bazel-based monorepo to unify firmware development, automated CAN code generation, and PCB design for an electric racecar."
 pubDate: "January 2026"
 heroImage: "/monorepo/big_block.png"

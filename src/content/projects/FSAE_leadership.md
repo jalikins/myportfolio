@@ -1,5 +1,5 @@
 ---
-title: "Electrical Lead Olin Electric Motorsports"
+title: "Electrical and Firmware Lead Olin Electric Motorsports"
 description: "Co-directed a 20-person electrical engineering team, overseeing firmware architecture, hardware design reviews, and cross-functional vehicle integration."
 pubDate: "August 2025"
 heroImage: "/leadership/team.jpg"
