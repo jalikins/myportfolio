@@ -1,12 +1,14 @@
 ---
 // src/components/VerticalCard.astro
-const { title, img, desc, url, badge, tags, target = "_blank" } = Astro.props;
+// CHANGED: target = "_self" instead of "_blank"
+const { title, img, desc, url, badge, tags, target = "_self" } = Astro.props;
 import { Image } from "astro:assets";
 ---
 
 <div class="card bg-base-100 shadow-lg hover:shadow-2xl transition ease-in-out hover:scale-[102%] border border-base-200 overflow-hidden flex flex-col h-full">
   <a href={url} target={target} class="flex flex-col h-full">
     
+    <!-- Image Header -->
     {img && (
       <figure class="w-full h-48 overflow-hidden">
         <Image
@@ -20,17 +22,21 @@ import { Image } from "astro:assets";
       </figure>
     )}
 
+    <!-- Card Body -->
     <div class="card-body p-6 flex-grow">
+      <!-- Title Section -->
       <h2 class="card-title text-xl font-bold leading-tight">
         {title}
       </h2>
       
+      <!-- Badge/Tag Section -->
       {badge && (
         <div class="flex flex-wrap gap-2">
           <span class="badge badge-secondary">{badge}</span>
         </div>
       )}
       
+      <!-- Description Section -->
       <p class="text-sm opacity-90 mt-2">{desc}</p>
       
       {tags && (

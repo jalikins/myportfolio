@@ -2,12 +2,16 @@
 title: "Type Race Application"
 description: "Developed a real-time multiplayer typing speed application focusing on asynchronous socket networking and MVC architecture."
 pubDate: "October 2024"
-heroImage: "/projects/type_race/main.png"
-badge: "Software"
+heroImage: "/type_race/initial_screen.png"
+badge: "Software, Python, TCP"
 ---
 
 ## Overview
 Type-Race is a competitive, multiplayer typing application built entirely in Python using the `pygame` library. Designed to help users improve their typing speed and accuracy, the game challenges players to accurately type a dynamically scrolling prompt within a strict 60-second timeframe, either solo or head-to-head against another player over a local network.
+
+* **[View the Live Game Website](https://olincollege.github.io/type-race/)**
+* **[View the GitHub Repository](https://github.com/olincollege/type-race)**
+* **[Watch the Video Overview (YouTube)](https://www.youtube.com/watch?v=DYhtCqgXzgE)**
 
 ## My Role & The Tech Stack
 * **Role:** Software Developer (Co-developed with a peer)
@@ -28,7 +32,7 @@ We wanted to keep the code scalable and clean so, we built the game using a stri
 ### 2. Real-Time Input & UI Feedback
 The prompt scrolls as the user types, and the system instantly flags errors with a visual red underline. 
 
-![Type Race Gameplay](/projects/type_race/gameplay.png)
+![Type Race Gameplay](/type_race/red_underline.png)
 *Caption: The primary user interface displaying the scrolling prompt, timer, and live WPM tracking.*
 
 ### 3. Multiplayer TCP Socket Networking
@@ -42,6 +46,3 @@ The most complex engineering challenge was real-time competition between two sep
 ## Outcomes & Project Links
 The project successfully demonstrated the ability to build a highly responsive desktop application with complex background networking. By isolating the game logic from the rendering and networking layers, the codebase remains clean and easily extensible for future features, such as online matchmaking or database-backed leaderboards.
 
-* **[View the Live Game Website](https://olincollege.github.io/type-race/)**
-* **[View the GitHub Repository](https://github.com/olincollege/type-race)**
-* **[Watch the Video Overview (YouTube)](https://www.youtube.com/watch?v=DYhtCqgXzgE)**
