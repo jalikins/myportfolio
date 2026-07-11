@@ -18,11 +18,14 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   </div>
 
   <div class="bg-base-200 p-6 rounded-xl shadow-lg max-w-2xl">
+    <!-- ADDED: action="/contact" and data-astro-reload -->
     <form 
       name="contact" 
       method="POST" 
       data-netlify="true" 
       netlify-honeypot="bot-field"
+      action="/contact"
+      data-astro-reload
       class="flex flex-col gap-4"
     >
       <input type="hidden" name="form-name" value="contact" />
